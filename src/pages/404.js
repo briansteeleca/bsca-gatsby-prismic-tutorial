@@ -1,6 +1,8 @@
 import React from 'react'
+import Page from '../templates/Page'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import { withUnpublishedPreview } from 'gatsby-source-prismic'
 
 const NotFoundPage = () => (
   <Layout>
@@ -13,4 +15,9 @@ const NotFoundPage = () => (
   </Layout>
 )
 
-export default NotFoundPage
+// If an unpublished `page` document is previewed, the Page template will be rendered.
+export default withUnpublishedPreview(NotFoundPage, {
+  templateMap: {
+    page: Page,
+  },
+})

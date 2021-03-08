@@ -10,6 +10,7 @@ module.exports = {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: 'bsca-gatsby-tutorial',
+        prismicToolbar: true,
         linkResolver: () => (doc) => linkResolver(doc),
         schemas: {
           homepage: require('./custom_types/homepage.json'),
