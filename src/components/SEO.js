@@ -15,6 +15,7 @@ const SEO = ({ description, title }) => (
         <Helmet>
           <title>{metaTitle}</title>
           <meta name="description" content={metaDescription} />
+          <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=bsca-gatsby-tutorial"></script>
         </Helmet>
       )
     }}
